@@ -1,0 +1,374 @@
+/*
+Theme Name: La Pizzeria
+Theme URI:
+Author: Christopher Smikle
+Author URI: https://kaizenwp.com
+Description: Theme for restaraunts
+Version: 1.0
+License: GNU Gneral Public License v2 or later
+License URI: http://www.gnu.org/license/glp-2.0.html
+Tags: restaraunts, mobile first, responsive
+Text Domain: lapizzeria
+*/
+
+/* Global CSS */
+
+html{
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  margin: 0;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+div#content{
+  width: 800px;
+  padding:40px;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+h1{
+  font-size: 48px;
+}
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 28px;
+}
+h4{
+  font-size: 24px;
+}
+
+.clear,
+.clear::after{
+  content: '';
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+.container{
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sr-text{
+  display: none;
+}
+
+.text-center{
+  text-align: center;
+}
+
+/* HEADER */
+header.site-header{
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 30px;
+}
+
+div.logo{
+  text-align: center;
+}
+@media only screen and (min-width:768px) {
+  div.logo{
+    text-align: left;
+  }
+}
+@media only screen and (min-width:992px) {
+  div.logo{
+    text-align: center;
+  }
+}
+
+img.logoimage{
+  width:250px;
+}
+
+
+@media only screen and (min-width:768px) {
+  header.site-header .container{
+    position: relative;
+  }
+  header.site-header .header-information{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+div.address{
+  display: block;
+  clear: both;
+  padding-top: 10px;
+}
+div.address p{
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+@media only screen and (min-width:768px){
+  div.address p{
+    text-align: right;
+  }
+}
+
+/* SOCIAL MENU */
+
+nav.socials ul{
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+@media only screen and (min-width:768px){
+  nav.socials ul{
+    float: right;
+  }
+}
+
+
+nav.socials ul li{
+  position: relative;
+  display: inline-block;
+}
+
+nav.socials ul li a:before{
+  font-family: 'Font Awesome 5 Brands';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  content: '\f08e';
+  font-size: 30px;
+  color: #000000;
+  -webkit-font-smoothing: antialiazed;
+}
+
+nav.socials li a[href*="facebook.com"]::before{
+  content: '\f09a';
+}
+nav.socials li a[href*="twitter.com"]::before{
+  content: '\f099';
+}
+nav.socials li a[href*="pinterest.com"]::before{
+  content: '\f231';
+}
+nav.socials li a[href*="youtube.com"]::before{
+  content: '\f167';
+}
+nav.socials li a[href*="instagram.com"]::before{
+  content: '\f16d';
+}
+
+/* Main Menu */
+nav.site-nav{
+    display: none;
+}
+@media only screen and (min-width:768px) {
+ nav.site-nav{
+      display: block;
+  }
+}
+
+nav.site-nav ul{
+list-style: none;
+padding: 0;
+margin: 0;
+width: 100%;
+display: table;
+}
+
+@media only screen and (min-width:768px) {
+  nav.site-nav ul li{
+    display: table-cell;
+    width: 1%;
+  }
+}
+
+nav.site-nav ul li a{
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav.site-nav ul li.current_page_item a{
+  border-bottom:  8px solid #a61206;
+}
+
+/* Responsive menu button */
+@media only screen and (max-width:767px) {
+  .mobile-menu a{
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    background-color:#a61206;
+    color: #ffffff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+
+  }
+}
+
+@media only screen and (min-width:768px){
+  .mobile-menu a{
+    display: none;
+  }
+}
+
+/* Hero Image */
+.hero{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 450px;
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.hero::after{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+}
+
+.hero .hero-content{
+  display: table-cell;
+  vertical-align: middle;
+  color: #ffffff;
+  z-index: 2;
+  position: relative;
+}
+
+@media only screen and (min-width:768px){
+  .hero-text{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width:992px){
+  .hero-text{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.main-content{
+  padding: 60px;
+  background-color: #ffffff;
+  position: relative;
+
+}
+
+
+@media only screen and (min-width:768px){
+    .main-content{
+      margin-top: -90px;
+    }
+}
+
+.content-text{
+    font-size: 18px;
+    line-height: 50px;
+}
+
+
+/** BOXES **/
+
+.box-information{
+  display: grid;
+}
+
+@media only screen and (min-width:768px){
+  .box-information{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.single-box{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  color: #ffffff;
+  text-align:center;
+}
+
+@media only screen and (min-width:768px){
+  .single-box{
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.single-box:nth-child(1){
+  background-color: #f19f30;
+}
+.single-box:nth-child(2){
+  background-color: #127427;
+}
+.single-box:nth-child(3){
+  background-color: #a61206;
+}
+
+
+@media only screen and (min-width:768px){
+  .single-box:nth-child(2){
+    order: 2;
+  }
+  .single-box:nth-child(2){
+    order: 1;
+  }
+}
+
+.content-box{
+  display: grid;
+  grid-template-rows: 20% 20% 40% 20%;
+  grid-template-areas: "."
+                       "top"
+                       "text"
+                       "."
+}
+
+.content-box h3{
+    grid-area: top;
+}
+.content-box p{
+  grid-area: text;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* End of style  */
