@@ -344,6 +344,7 @@ nav.site-nav ul li.current_page_item a{
   }
 }
 
+
 .content-box{
   display: grid;
   grid-template-rows: 20% 20% 40% 20%;
@@ -355,7 +356,21 @@ nav.site-nav ul li.current_page_item a{
 
 .content-box h3{
     grid-area: top;
+    margin: 5px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+
 }
+
+@media only screen and (min-width:768px){
+  .content-box{
+    grid-template-rows: 20% 20% 40% 20%;
+  }
+}
+
+
+
 .content-box p{
   grid-area: text;
 }
